@@ -6,11 +6,6 @@ A Next.js application that displays a list of courses in a  grid format. The pro
 - [Getting Started](#getting-started)
 - [Technologies Used](#technologies-used)
 - [Architecture & Design Decisions](#architecture--design-decisions)
-- [Folder Structure](#folder-structure)
-- [Features](#features)
-- [How to Contribute](#how-to-contribute)
-- [License](#license)
-- [Contact](#contact)
 
 ## Getting Started
 
