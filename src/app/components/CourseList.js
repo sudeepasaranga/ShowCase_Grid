@@ -1,5 +1,6 @@
 "use client";
 
+import React, { useEffect, useState } from 'react';
 import CourseCard from './CourseCard';
 import FilterButton from './FilterButton';
 
@@ -11,6 +12,29 @@ const filters = [
   "Life Learning",
   "HR & Leadership"
 ];
+
+function CourseList() {
+  const [courses, setCourses] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchCourses = async () => {
+      try {
+        const response = await fetch('https://66fcfeedc3a184a84d18a7f4.mockapi.io/imperial/api/v1/courses');
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        setCourses(data);
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+  }, []);
 
 
 
@@ -39,12 +63,13 @@ const filters = [
               margin: '0 auto', 
               padding: '0 20px' 
             }}>
+
             </div>
           </div>
           <div className="flex gap-4 items-start mt-14 text-lg font-bold max-md:mt-10">
             <button className="flex gap-1.5 justify-center items-center px-4 py-2.5 text-white rounded-lg bg-zinc-900">
               Show more
-             
+              <img loading="lazy" src="#" alt="" />
             </button>
             <button className="gap-1.5 self-stretch px-4 py-2.5 rounded-lg border border-solid border-zinc-900 text-zinc-900">
               View all
@@ -54,6 +79,6 @@ const filters = [
       </section>
     </main>
   );
-
+}
 
 export default CourseList;
