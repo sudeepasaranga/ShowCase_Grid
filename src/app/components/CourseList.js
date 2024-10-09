@@ -58,13 +58,7 @@ function CourseList() {
             <button className="flex w-10 h-10 bg-black rounded-full min-h-[40px]" aria-label="Filter options" />
           </div>
           <div className="self-stretch mt-16 max-md:mt-10 max-md:max-w-full">
-            <div className="course-list" style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gap: '20px', 
-              margin: '0 auto', 
-              padding: '0 20px' 
-            }}>
+            <div className="course-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-5 mx-auto">
               {courses.map((course, index) => (
                 <CourseCard 
                   key={index} 
