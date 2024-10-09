@@ -1,5 +1,6 @@
 import CourseList from '@/app/components/CourseList'; 
 import FilterButton from '@/app/components/FilterButton'; 
+import './globals.css';
 
 const Page = () => {
   return (

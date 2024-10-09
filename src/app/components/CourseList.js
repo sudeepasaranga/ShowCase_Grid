@@ -65,7 +65,18 @@ function CourseList() {
               margin: '0 auto', 
               padding: '0 20px' 
             }}>
-    
+              {courses.map((course, index) => (
+                <CourseCard 
+                  key={index} 
+                  title={course.course_name} 
+                  image={course.image_url} 
+                  description={course.sub_title} 
+                  price={course.sale_price} 
+                  fullPrice={course.regular_price} 
+                  originalPrice={course.regular_price !== course.sale_price ? course.regular_price : null}
+                  modules={course.tags.length} 
+                />
+              ))}
             </div>
           </div>
           <div className="flex gap-4 items-start mt-14 text-lg font-bold max-md:mt-10">
