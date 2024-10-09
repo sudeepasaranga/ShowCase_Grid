@@ -34,9 +34,11 @@ function CourseList() {
       }
     };
 
+    fetchCourses();
   }, []);
 
-
+  if (loading) return <div>Loading courses...</div>;
+  if (error) return <div>Error loading courses: {error}</div>;
 
   return (
     <main className="flex overflow-hidden flex-col bg-white">
@@ -63,7 +65,7 @@ function CourseList() {
               margin: '0 auto', 
               padding: '0 20px' 
             }}>
-
+    
             </div>
           </div>
           <div className="flex gap-4 items-start mt-14 text-lg font-bold max-md:mt-10">
