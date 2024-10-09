@@ -1,41 +1,38 @@
-<<<<<<< HEAD
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Showcase Grid
+
+A Next.js application that displays a list of courses in a  grid format. The project uses mock data from an API to showcase courses and filter options to allow users to navigate between categories.
+
+## Table of Contents
+- [Getting Started](#getting-started)
+- [Technologies Used](#technologies-used)
+- [Architecture & Design Decisions](#architecture--design-decisions)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+To set up and run the project locally, you need to have the following installed:
+- Node.js (version 14.x or later)
+- Git
 
+### Installation
+Clone the repository:
 ```bash
+git clone https://github.com/sudeepasaranga/ShowCase_Grid.git
+cd ShowCase_Grid
+
+### Install the dependencies:
+npm install
+
+### Run the application:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This command starts the development server. You can then open your browser and go to http://localhost:3000 to view the app.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Building for Production
+npm run build
+This will optimize and prepare the application for deployment.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-=======
-# ShowCase_Grid
-ShowCase_Grid By Using Next JS
->>>>>>> f4b95dcabdcc3d10cfcad26a8386ac85bb0776f1
+## Technologies Used
+- Next.js: Chosen as the framework for its optimized performance, server-side rendering capabilities, and built-in routing.
+- React: Used for building reusable UI components.
+- Tailwind CSS: Utilized for styling due to its utility-first approach and flexibility in customizing responsive layouts.
+- Fetch API: For data fetching, specifically for interacting with the mock API to retrieve course data.
